@@ -1,0 +1,135 @@
+@import "base/base";
+@import "base/mixin";
+@import "base/variables";
+
+
+body{
+    background: $body-background;
+}
+
+.main-container{
+    width: 100%;
+    height: 350px;
+    background: $container-background;
+    margin: 150px auto;
+    @include flexbox(flex-start);
+
+    .container{
+        @include flexbox(flex-start);
+    }
+}
+
+
+.social{
+    width: 150px;
+    height: 350px;
+    background: $background-color;
+    position: relative;
+    overflow: hidden;
+
+    .left{
+        width: 100%;
+        height: 350px;
+        background: $side-color;
+        position: absolute;
+        @include flexbox(center);
+        font-size: $font-small;
+        color: $social-color;
+        top: 0;
+        left: 0;
+        transition: all .3s ease;
+    }
+
+    .right{
+        width: 100%;
+        height: 350px;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        font-size: $font-big;
+        color: $social-color;
+        @include flexbox(center);
+        transition: all .3s ease;
+    }
+
+    &:hover .left{
+        left: -100%;
+        transition: all .3s ease;
+    }
+
+    &:hover .right{
+        right: 0;
+        transition: all .3s ease;
+    }
+
+}
+
+.block-info{
+    width: 0px;
+    height: 350px;
+    background: $social-color;
+    @include flexbox(center);
+    @include flexleft();
+    flex-direction: column;
+    overflow: hidden;
+    transition: all .7s ease;
+
+    .block-header{
+        font-size: $font-small;
+        margin-bottom: 30px;
+    }
+
+    .block-footer{
+        width: 400px;
+    }
+}
+
+
+.container:hover .block-info{
+    width: 450px;
+    padding-left: 20px;
+    transition: all .7s ease;
+}
+
+.twitter-right{
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.facebook-right{
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.linkedin-right{
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.instagram-right{
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.youtube-right{
+    background: #FF416C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.tumblr-right{
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dribbble-right{
+    background: #f953c6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b91d73, #f953c6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b91d73, #f953c6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

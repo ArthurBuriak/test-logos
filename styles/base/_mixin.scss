@@ -1,0 +1,10 @@
+@mixin flexbox($jc, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin flexleft(){
+    display: flex;
+    align-items: flex-start;
+}
